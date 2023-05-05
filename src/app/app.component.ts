@@ -21,4 +21,15 @@ export class AppComponent {
       this.posts = response;
     });
   }
+
+  createPost(){
+    this.http.post('https://jsonplaceholder.typicode.com/posts', {})
+    .subscribe((res: any)=>{
+      alert(JSON.stringify(res));
+    }, 
+    (error)=> {
+      alert(JSON.stringify(error))
+    }
+    );
+  }
 }
