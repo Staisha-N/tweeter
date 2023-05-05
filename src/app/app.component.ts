@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tweeter';
+  //injected HttpClient service into 
+  //the app component
+  
+  constructor(private http: HttpClient){}
+  
+  posts: any [] = [];
+  
+  loadPosts(){
+    this.http.get('https://jsonplaceholder.typicode.com/posts')
+    .subscribe((response: any)=>{
+      this.posts = response;
+    });
+  }
 }
