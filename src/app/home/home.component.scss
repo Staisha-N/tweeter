@@ -32,7 +32,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    background-color: #5C6647;
     color: white;
     font-weight: 600;
     }
@@ -345,3 +345,24 @@
         margin-right: 10px;
       }
       }
+
+      #leaf-background {  
+        height: 650 px;  
+        color: #fff;background-image: url("../../assets/img/leaves.png");    
+        background-size: cover;  
+        height: 100vh;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        z-index: -1;
+    } 
+
+    body {
+        margin: 0px;
+        height: 100%;
+    }
