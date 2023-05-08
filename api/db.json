@@ -1,0 +1,19 @@
+{
+  "users": [
+      {
+          "firstName": "John",
+          "lastName": "Doe",
+          "message": "TypeScript is a superset of JavaScript that adds static typing and other features."
+      },
+      {
+          "firstName": "Jane",
+          "lastName": "Doe",
+          "message": "Angular is a popular front-end framework for building complex web applications."
+      },
+      {
+          "firstName": "Bob",
+          "lastName": "Smith",
+          "message": "TypeScript was created by Microsoft and is now an open-source language."
+      }
+  ]
+}

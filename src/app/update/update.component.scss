@@ -238,9 +238,25 @@
         z-index: -1;
     } 
 
-    body {
-        margin: 0px;
-        height: 100%;
+    .post-form {
+        display: flex;
+        width: 200px;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-top: 10px;
+
+        input {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        textarea {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        button {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
     }
 
    

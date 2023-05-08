@@ -14,11 +14,17 @@
   
     <div class="content" role="main">
   
-    <h2>Update</h2>
-    <p>Update your post here!</p>
+    <h2>Upload</h2>
+    <p>Upload a post here!</p>
+
+    <form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)" class="post-form">
+        <input type="text" ngModel name="title" placeholder="Enter post title">
+        
+        <textarea name="body" ngModel placeholder="Enter post body"></textarea>
+        
+        <button>Upload post</button>
+    </form>
 
     <div id="leaf-background"class="container"></div> 
   
 </div>
-
-
