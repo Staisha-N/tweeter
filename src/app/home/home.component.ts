@@ -13,11 +13,10 @@ export class HomeComponent {
   //injected HttpClient service into 
   //the app component
 
+  
   posts: any [] = [];
   
-  constructor(private userData: UsersDataService, private router: Router){
-    
-  }
+  constructor(private userData: UsersDataService, private router: Router){}
 
   showPosts(){
     this.userData.loadPosts().subscribe((response: any)=>{
@@ -25,18 +24,8 @@ export class HomeComponent {
     });
   }
   
-  
-
   createPost(){
     this.router.navigate(['update']);
-    // this.http.post('https://jsonplaceholder.typicode.com/posts', {})
-    // .subscribe((res: any)=>{
-    //   alert(JSON.stringify(res));
-    // }, 
-    // (error)=> {
-    //   alert(JSON.stringify(error))
-    // }
-    // );
   }
 }
 

@@ -20,8 +20,8 @@
     <form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)" class="post-form">
         <input type="text" ngModel name="firstName" placeholder="Enter your first name">
         <input type="text" ngModel name="lastName" placeholder="Enter your last name">
-        
-        <textarea name="message" ngModel placeholder="Enter post body"></textarea>
+
+        <textarea name="message" ngModel placeholder="Enter post message"></textarea>
         
         <button>Upload post</button>
     </form>
