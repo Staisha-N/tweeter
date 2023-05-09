@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { UsersDataService } from '../services/users-data.service';
 
 @Component({
   selector: 'app-home',
@@ -11,17 +12,20 @@ export class HomeComponent {
   title = 'tweeter';
   //injected HttpClient service into 
   //the app component
-  
-  constructor(private http: HttpClient, private router: Router){}
-  
+
   posts: any [] = [];
   
-  loadPosts(){
-    this.http.get('http://localhost:3000/users')
-    .subscribe((response: any)=>{
+  constructor(private userData: UsersDataService, private router: Router){
+    
+  }
+
+  showPosts(){
+    this.userData.loadPosts().subscribe((response: any)=>{
       this.posts = response;
     });
   }
+  
+  
 
   createPost(){
     this.router.navigate(['update']);

@@ -24,7 +24,7 @@
       <div class="tweet-header">
         <img src="../../assets/img/profile.png" alt="" class="avator">
         <div class="tweet-header-info">
-          {{ post.firstName }} {{ post.lastName }}<span>@{{ post.firstName }}_{{ post.lastName }}</span><span>{{ post.month }} {{ post.day }}</span>
+          {{ post.firstName }} {{ post.lastName }}<span>@{{ post.firstName }}_{{ post.lastName }}</span><span>|  {{ post.month }} {{ post.day }}</span>
           <p>{{ post.message }}</p>
           
         </div>
@@ -58,7 +58,7 @@
 
   <div class="card-container">
     
-    <a (click)="loadPosts()"
+    <a (click)="showPosts()"
       class="card" 
       href="javascript::void(0)" >
       
