@@ -13,18 +13,30 @@
     </div>
   
     <div class="content" role="main">
+
+    <div class="button-container">
+        <button class="cancel-button" (click)="goback()" >Cancel</button>
+    </div>
+        
   
     <h2>Upload</h2>
     <p>Upload a post here!</p>
 
-    <form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)" class="post-form">
-        <input type="text" ngModel name="firstName" placeholder="Enter your first name">
-        <input type="text" ngModel name="lastName" placeholder="Enter your last name">
 
-        <textarea name="message" ngModel placeholder="Enter post message"></textarea>
-        
-        <button>Upload post</button>
-    </form>
+    <div class="Options">
+        <form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)" class="post-form">
+            <input type="text" ngModel name="firstName" placeholder="Enter your first name">
+            <input type="text" ngModel name="lastName" placeholder="Enter your last name">
+
+            <textarea name="message" ngModel placeholder="Enter post message"></textarea>
+            
+            <button>Upload post</button> 
+            
+        </form>
+    </div>
+    
+
+    
 
     <div id="leaf-background"class="container"></div> 
   

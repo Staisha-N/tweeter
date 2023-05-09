@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -29,10 +30,13 @@ export class UpdateComponent {
     data.month = this.getCurrentMonth();
     data.day = this.getCurrentDay();
 
-    alert(JSON.stringify(data));
     this.http.post('http://localhost:3000/users', data)
     .subscribe((res: any)=>{
       console.log(this);
     });
+  }
+
+  goback(){
+    this.router.navigate(['home']);
   }
 }
