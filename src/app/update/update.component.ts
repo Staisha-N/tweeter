@@ -11,10 +11,8 @@ export class UpdateComponent {
   constructor(private http: HttpClient, private router: Router){}
 
   getUserFormData(data: any){
-    let title = data.title;
-    let body = data.body;
     console.warn(data);
-    this.http.post('https://jsonplaceholder.typicode.com/posts', {title, body})
+    this.http.post('http://localhost:3000/users', data)
     .subscribe((res: any)=>{
       console.log(this);
     });
