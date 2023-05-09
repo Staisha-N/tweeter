@@ -17,7 +17,7 @@ export class HomeComponent {
   posts: any [] = [];
   
   loadPosts(){
-    this.http.get('https://jsonplaceholder.typicode.com/posts')
+    this.http.get('http://localhost:3000/users')
     .subscribe((response: any)=>{
       this.posts = response;
     });
