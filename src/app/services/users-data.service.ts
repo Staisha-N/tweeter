@@ -14,6 +14,8 @@ export class UsersDataService {
     return this.http.get('http://localhost:3000/users');
   }
 
-  
+  makePost(data: any){
+    return this.http.post('http://localhost:3000/users', data);
+  }
 
 }

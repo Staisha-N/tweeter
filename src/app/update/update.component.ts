@@ -2,6 +2,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { UsersDataService } from '../services/users-data.service';
 
 @Component({
   selector: 'app-update',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./update.component.scss']
 })
 export class UpdateComponent {
-  constructor(private http: HttpClient, private router: Router, private toastr: ToastrService){}
+  constructor(private userData: UsersDataService, private http: HttpClient, private router: Router, private toastr: ToastrService){}
   
   getCurrentMonth(): string {
     const date = new Date();
@@ -49,7 +50,7 @@ export class UpdateComponent {
     data.month = this.getCurrentMonth();
     data.day = this.getCurrentDay();
 
-    this.http.post('http://localhost:3000/users', data)
+    this.userData.makePost(data)
     .subscribe((res: any)=>{
       this.toastr.success('Post created successfully.', 'Success!');
     });
