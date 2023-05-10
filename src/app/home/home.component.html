@@ -19,7 +19,7 @@
   <h2>Recent posts</h2>
   <p>View some recent posts by our users.</p>
 
-  <div *ngFor="let post of posts.slice(-2)">
+  <div *ngFor="let post of posts.slice(-2); let i = index">
     <div class="tweet-wrap">
       <div class="tweet-header">
         <img src="../../assets/img/profile.png" alt="" class="avator">
@@ -28,7 +28,10 @@
           <p>{{ post.message }}</p>
           
         </div>
-        
+        <div class="post-buttons">
+          <a onclick="editPost(i)"><img src="../../assets/img/icons8-edit-24.png"></a>
+          <a onclick="deletePost()"><img src="../../assets/img/icons8-waste-20.png"></a>
+        </div>
         
       </div>
       
@@ -59,10 +62,7 @@
   </div>
 
   <div class="card-container">
-    <!-- <div class="post-buttons">
-      <a onclick="editPost()"><img src="../../assets/img/icons8-edit-24.png"></a>
-      <a onclick="deletePost()"><img src="../../assets/img/icons8-waste-20.png"></a>
-    </div> -->
+    
     <a (click)="showPosts()"
       class="card" 
       href="javascript::void(0)" >

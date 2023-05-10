@@ -53,7 +53,6 @@ export class UpdateComponent {
     .subscribe((res: any)=>{
       this.toastr.success('Post created successfully.', 'Success!');
     });
-
   }
 
   goback(){

@@ -14,7 +14,6 @@ export class HomeComponent {
   //injected HttpClient service into 
   //the app component
 
-  
   posts: any [] = [];
   
   constructor(private userData: UsersDataService, private router: Router){}

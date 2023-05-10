@@ -229,6 +229,7 @@ img {
   display: flex;
   align-items: flex-start;
   font-size: 14px;
+  // justify-content: space-between;
 }
 
 .tweet-header-info {
@@ -317,7 +318,8 @@ img {
 }
 
 .post-buttons {
-    display: flex;
-    padding-left: 50px;
-    gap: 30px;
+  display: flex;
+  padding-left: 50px;
+  gap: 30px;
+  margin-left: auto;
 }
