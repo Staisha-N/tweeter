@@ -8,14 +8,16 @@ export class UsersDataService {
 
   constructor(private http:HttpClient) { }
 
-  
-  
   loadPosts(){
     return this.http.get('http://localhost:3000/users');
   }
 
   makePost(data: any){
     return this.http.post('http://localhost:3000/users', data);
+  }
+
+  deletePost(id: any){
+    return this.http.delete('http://localhost:3000/users'+'/'+id);
   }
 
 }

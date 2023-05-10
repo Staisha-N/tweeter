@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { UsersDataService } from '../services/users-data.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,7 @@ export class HomeComponent {
 
   posts: any [] = [];
   
-  constructor(private userData: UsersDataService, private router: Router){}
+  constructor(private userData: UsersDataService, private router: Router, private toastr: ToastrService){}
 
   showPosts(){
     if (this.hidePosts) {
@@ -28,6 +29,13 @@ export class HomeComponent {
       this.posts = [];
       this.hidePosts = !this.hidePosts;
     }
+  }
+
+  deleteItem(post: any){
+    this.userData.deletePost(post.id)
+        .subscribe(response => {
+          this.posts = this.posts.filter(item => item.id !== post.id);
+        });
   }
   
   createPost(){

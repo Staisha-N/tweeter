@@ -29,11 +29,17 @@
           
         </div>
         <div class="post-buttons">
-          <a onclick="editPost(i)"><img src="../../assets/img/icons8-edit-24.png"></a>
-          <a onclick="deletePost()"><img src="../../assets/img/icons8-waste-20.png"></a>
+          <a (click)="deleteItem(post)"
+            href="javascript::void(0)" >
+          <img src="../../assets/img/icons8-edit-24.png"></a>
+          
+          <a (click)="deleteItem(post)"
+            href="javascript::void(0)" >
+          <img src="../../assets/img/icons8-waste-20.png"></a>
         </div>
         
       </div>
+      
       
       <div class="tweet-info-counts">
         
