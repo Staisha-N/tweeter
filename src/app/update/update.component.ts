@@ -1,4 +1,4 @@
-
+import { ToastrService } from 'ngx-toastr';
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./update.component.scss']
 })
 export class UpdateComponent {
-  constructor(private http: HttpClient, private router: Router){}
+  constructor(private http: HttpClient, private router: Router, private toastr: ToastrService){}
   
   getCurrentMonth(): string {
     const date = new Date();
@@ -24,6 +24,18 @@ export class UpdateComponent {
   }
 
   getUserFormData(data: any){ 
+
+    if (!data){
+      return;
+      
+    } else if(!data.firstName){
+      return;
+    } else if(!data.lastName){
+      return;
+    } else if(!data.message){
+      return;
+    }
+
     data.likes = 0;
     data.comments = 0;
     data.shares = 0;
@@ -32,8 +44,9 @@ export class UpdateComponent {
 
     this.http.post('http://localhost:3000/users', data)
     .subscribe((res: any)=>{
-      console.log(this);
+      this.toastr.success('Hello world!', 'Toastr fun!');
     });
+
   }
 
   goback(){

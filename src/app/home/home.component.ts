@@ -10,6 +10,7 @@ import { UsersDataService } from '../services/users-data.service';
 })
 export class HomeComponent {
   title = 'tweeter';
+  hidePosts: boolean = true;
   //injected HttpClient service into 
   //the app component
 
@@ -19,9 +20,15 @@ export class HomeComponent {
   constructor(private userData: UsersDataService, private router: Router){}
 
   showPosts(){
-    this.userData.loadPosts().subscribe((response: any)=>{
-      this.posts = response;
-    });
+    if (this.hidePosts) {
+      this.userData.loadPosts().subscribe((response: any)=>{
+        this.posts = response;
+      });
+      this.hidePosts = !this.hidePosts;
+    } else {
+      this.posts = [];
+      this.hidePosts = !this.hidePosts;
+    }
   }
   
   createPost(){
