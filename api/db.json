@@ -45,59 +45,15 @@
       "id": 4
     },
     {
-      "firstName": "Luffy",
-      "lastName": "D. Monkey",
-      "message": "I like this website because it has leaves.",
+      "firstName": "Wayne",
+      "lastName": "Gretzky",
+      "message": "I think I like Angular more than hockey.",
       "likes": 0,
       "comments": 0,
       "shares": 0,
       "month": "May",
       "day": "9",
-      "id": 5
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "jkl",
-      "message": "abcdefghijklmnopqrstuvwxyz",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "month": "May",
-      "day": "9",
-      "id": 6
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "jkl",
-      "message": "abcdefghijklmnopqrstuvwxyz",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "month": "May",
-      "day": "9",
-      "id": 7
-    },
-    {
-      "firstName": "1w",
-      "lastName": "1q",
-      "message": "1r",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "month": "May",
-      "day": "9",
-      "id": 8
-    },
-    {
-      "firstName": "Staisha",
-      "lastName": "1",
-      "message": "1",
-      "likes": 0,
-      "comments": 0,
-      "shares": 0,
-      "month": "May",
-      "day": "9",
-      "id": 9
+      "id": 11
     }
   ]
 }

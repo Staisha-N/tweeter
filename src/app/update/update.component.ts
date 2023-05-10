@@ -26,14 +26,21 @@ export class UpdateComponent {
   getUserFormData(data: any){ 
 
     if (!data){
+      this.toastr.error('Please fill out required fields.', 'Error');
+      return;
+
+    } else if(!data.firstName){
+      this.toastr.error('Please fill out first name.', 'Error');
+      return;
+
+    } else if(!data.lastName){
+      this.toastr.error('Please fill out last name', 'Error');
+      return;
+
+    } else if(!data.message){
+      this.toastr.error('Please fill out a message.', 'Error');
       return;
       
-    } else if(!data.firstName){
-      return;
-    } else if(!data.lastName){
-      return;
-    } else if(!data.message){
-      return;
     }
 
     data.likes = 0;
@@ -44,7 +51,7 @@ export class UpdateComponent {
 
     this.http.post('http://localhost:3000/users', data)
     .subscribe((res: any)=>{
-      this.toastr.success('Hello world!', 'Toastr fun!');
+      this.toastr.success('Post created successfully.', 'Success!');
     });
 
   }

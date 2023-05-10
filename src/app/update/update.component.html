@@ -25,10 +25,18 @@
 
     <div class="Options">
         <form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)" class="post-form">
-            <input type="text" ngModel name="firstName" placeholder="Enter your first name">
-            <input type="text" ngModel name="lastName" placeholder="Enter your last name">
-
-            <textarea name="message" ngModel placeholder="Enter post message"></textarea>
+            <div class="required"><label for="firstName">First Name</label>
+                <input type="text" ngModel name="firstName" placeholder="Enter your first name" maxlength="10">
+            </div>
+            
+            <div class="required"><label for="lastName">Last Name</label>
+                <input type="text" ngModel name="lastName" placeholder="Enter your last name" maxlength="10">
+            </div>
+            
+            <div class="required"><label for="message">Message</label>
+                <textarea name="message" ngModel placeholder="Enter post message" maxlength="100"></textarea>
+            </div>
+            
             
             <button>Upload post</button> 
             
