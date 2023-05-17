@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsersDataService } from '../services/users-data.service';
 import { userPost } from '../models/userPost';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-edit',
@@ -10,8 +11,6 @@ import { userPost } from '../models/userPost';
   styleUrls: ['./edit.component.scss']
 })
 export class EditComponent implements OnInit {
-
-  submitted = false;
 
   constructor(private userData: UsersDataService, private router: Router, 
     private toastr: ToastrService, private route: ActivatedRoute){
@@ -37,8 +36,12 @@ export class EditComponent implements OnInit {
     )
   }
 
-  getUserFormData(data: any){
-
+  saveChanges(f:NgForm){
+    this.userData.editPost(this.id, f.value).subscribe(
+      data => {
+        this.toastr.success('Post updated successfully.', 'Success!');
+      }
+    )
   }
 
   goback(){

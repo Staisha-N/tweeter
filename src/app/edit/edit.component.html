@@ -22,7 +22,7 @@
     <p>Edit a post here!</p>
 
     <div class="Options">
-        <form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)" class="post-form">
+        <form #f="ngForm" (ngSubmit)="saveChanges(f)" class="post-form">
             <div class="required"><label for="firstName">First Name</label>
                 <input type="text" [(ngModel)]="post.firstName" name="firstName" placeholder="Enter your first name" maxlength="10">
             </div>
@@ -40,6 +40,7 @@
             
         </form>
     </div>
+    
     
     <div id="leaf-background"class="container"></div> 
   

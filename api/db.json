@@ -21,6 +21,12 @@
       "comments": 1,
       "month": "Mar",
       "day": 22
+    },
+    {
+      "firstName": "AnaStaisha",
+      "lastName": "Neville",
+      "message": "One of the main differences between TypeScript and JavaScript is that TypeScript has static typing!",
+      "id": 3
     }
   ]
 }
