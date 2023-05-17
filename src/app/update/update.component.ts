@@ -1,6 +1,5 @@
 import { ToastrService } from 'ngx-toastr';
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { UsersDataService } from '../services/users-data.service';
 
@@ -10,7 +9,7 @@ import { UsersDataService } from '../services/users-data.service';
   styleUrls: ['./update.component.scss']
 })
 export class UpdateComponent {
-  constructor(private userData: UsersDataService, private http: HttpClient, private router: Router, private toastr: ToastrService){}
+  constructor(private userData: UsersDataService, private router: Router, private toastr: ToastrService){}
   
   getCurrentMonth(): string {
     const date = new Date();

@@ -1,1 +1,46 @@
-<p>edit works!</p>
+<div class="toolbar" role="banner">
+    
+    <img
+        width="40"
+        alt="Angular Logo"
+        src="../../assets/img/Angular-White.png"
+    />
+
+    <span>Welcome to Tweeter!</span>
+        <div class="spacer"></div>
+        <a href="https://github.com/Staisha-N"><img src="assets/img/icons8-github-48.png"></a>
+        <a href="https://www.linkedin.com/in/staisha-neville/"><img src="assets/img/icons8-linkedin-50.png"></a>
+    </div>
+  
+    <div class="content" role="main">
+
+    <div class="button-container">
+        <button class="cancel-button" (click)="goback()">Back</button>
+    </div>
+        
+    <h2>Edit</h2>
+    <p>Edit a post here!</p>
+
+    <div class="Options">
+        <form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)" class="post-form">
+            <div class="required"><label for="firstName">First Name</label>
+                <input type="text" [(ngModel)]="post.firstName" name="firstName" placeholder="Enter your first name" maxlength="10">
+            </div>
+            
+            <div class="required"><label for="lastName">Last Name</label>
+                <input type="text" [(ngModel)]="post.lastName" name="lastName" placeholder="Enter your last name" maxlength="10">
+            </div>
+            
+            <div class="required"><label for="message">Message</label>
+                <textarea name="message" [(ngModel)]="post.message" ngModel placeholder="Enter post message" maxlength="100"></textarea>
+            </div>
+            
+            
+            <button>Save post</button> 
+            
+        </form>
+    </div>
+    
+    <div id="leaf-background"class="container"></div> 
+  
+</div>
