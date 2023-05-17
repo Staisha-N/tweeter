@@ -37,6 +37,24 @@ export class EditComponent implements OnInit {
   }
 
   saveChanges(f:NgForm){
+    if (!f.value){
+      this.toastr.error('Please fill out required fields.', 'Error');
+      return;
+
+    } else if(!f.value.firstName){
+      this.toastr.error('Please fill out first name.', 'Error');
+      return;
+
+    } else if(!f.value.lastName){
+      this.toastr.error('Please fill out last name', 'Error');
+      return;
+
+    } else if(!f.value.message){
+      this.toastr.error('Please fill out a message.', 'Error');
+      return;
+      
+    } 
+
     this.userData.editPost(this.id, f.value).subscribe(
       data => {
         this.toastr.success('Post updated successfully.', 'Success!');
