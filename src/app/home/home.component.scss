@@ -19,6 +19,8 @@ h6 {
 p {
   margin: 0;
   width: 300px;
+  justify-content: center;
+  display: flex;
 }
 
 .spacer {
@@ -44,7 +46,7 @@ p {
 
 .content {
   display: flex;
-  margin: 82px auto 32px;
+  margin-top: 82px;
   padding: 0 16px;
   max-width: 960px;
   flex-direction: column;
@@ -312,10 +314,10 @@ img {
   right: 0px;
   bottom: 0px;
   left: 0px;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: auto 100%;
+  background-size: 100% 100%;
   z-index: -1;
-  background-repeat: repeat-x;
 }
 
 .post-buttons {
