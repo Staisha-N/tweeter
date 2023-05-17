@@ -20,4 +20,8 @@ export class UsersDataService {
     return this.http.delete('http://localhost:3000/users'+'/'+id);
   }
 
+  editPost(id: any, data: any){
+    return this.http.put('http://localhost:3000/users'+'/'+id, data);
+  }
+
 }
